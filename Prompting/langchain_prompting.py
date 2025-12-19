@@ -2,43 +2,44 @@ import pandas as pd
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import PromptTemplate
 from langchain import LLMChain
+from config import Config
+from evaluate import evaluate_model
 
 # Load your CSV
-df = pd.read_csv("merged_reviews.csv")   # matches uploaded file name
-reviews = df["review"].tolist()
+df = pd.read_csv(Config.file_path) [350:450]
+reviews = df["text"].tolist()
 
 # Define zero-shot classification prompt
-prompt_template = """
-You are a strict classifier for product reviews.
-Your task: classify a review as either REAL or FAKE.
-
-Guidelines:
-- REAL: personal experiences, detailed, honest sentiment, balanced.
-- FAKE: overly generic, marketing-like, exaggerated, repeated phrases, unnatural enthusiasm.
-
-Respond only with one word: REAL or FAKE.
-
-Review: "{text}"
-Answer:
-"""
 
 prompt = PromptTemplate(
-    input_variables=["text"],
-    template=prompt_template
+    input_variables=["text"], # the placeholder to be replaced based on prompt template
+    template=Config.zero_shot_prompt_template
 )
-
-# Load small model
-llm = OllamaLLM(model="llama3.1")
-
-# Create chain
-chain = LLMChain(llm=llm, prompt=prompt)
 
 # Classify each review
 results = []
 for r in reviews:
     result = chain.invoke({"text": r})
-    label = result["text"].strip()
+    # Clean the output - extract only "truthful" or "deceptive"
+    label = result.strip().lower()
+    # Extract first word if model adds extra text
+    if " " in label:
+        label = label.split()[0]
+    # Remove any punctuation
+    label = label.strip('.,!?;:')
+    print(f"Raw output: {result} -> Cleaned: {label}")
     results.append(label)
+
+accuracy, f1, conf_matrix = evaluate_model(df, results)
+
+print("=" * 50)
+print("ZERO-SHOT PROMPTING RESULTS")
+print("=" * 50)
+print("Accuracy:", accuracy)
+print("\nF1 Score:", f1)
+print("\nConfusion Matrix:")
+print(conf_matrix)
+print("=" * 50)
 
 # Add results back to DataFrame
 df["prediction"] = results
