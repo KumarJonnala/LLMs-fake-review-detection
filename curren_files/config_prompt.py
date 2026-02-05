@@ -1,6 +1,6 @@
 class Config:
 
-    file_path = "/home/bumu60du/fake_review_detection/sampled_deceptive_opinion_240.csv"
+    file_path = "/home/sohy47ma/ReviewProject/fake_reviews_prediction/Datasets/sampled_deceptive_opinion_new.csv"
     model = "llama3.2:3b"
 
     # depth:Modifiers(with/without), Width:Information(less/detailed)
