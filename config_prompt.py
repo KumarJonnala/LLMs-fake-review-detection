@@ -1,6 +1,7 @@
 class Config:
 
     file_path = "/home/bumu60du/fake_review_detection/sampled_deceptive_opinion_240.csv"
+    model = "llama3.2:3b"
 
     # depth:Modifiers(with/without), Width:Information(less/detailed)
 
