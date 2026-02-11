@@ -15,6 +15,8 @@ class Config:
     The products reviewed may belong to categories such as:
     Home and Kitchen, Sports and Outdoors, Electronics, Beauty, Clothing, Books, and similar retail categories.
 
+    Product Category:
+    {category}
 
     Review: "{text}"
 
@@ -36,6 +38,8 @@ class Config:
     Classification: fake
 
     Now classify this review:
+    Product Category:
+    {category}
     Review: "{text}"
     Classify this review as either "real" or "fake" (respond with only one word):"""
 
@@ -62,6 +66,8 @@ class Config:
     Classification: real
 
     Now classify this review:
+    Product Category:
+    {category}
     Review: "{text}"
     Classify this review as either "real" or "fake" (respond with only one word):"""
 
