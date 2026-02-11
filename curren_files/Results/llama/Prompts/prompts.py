@@ -2,7 +2,7 @@ class Config:
 
     #file_path = "D:\OVGU _Saurabh\SEM 3\Review Project\Code\Datasets\sampled_deceptive_opinion_new.csv"
 
-    model = "llama3.2:3b"
+    model = "llama3.1:8b"
 
     # Define zero-shot classification prompt
     # text placeholder in the prompt template will be replaced with actual review text.
