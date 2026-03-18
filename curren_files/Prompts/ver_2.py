@@ -18,7 +18,7 @@ class Config:
     # Define one-shot classification prompt with one example
     one_shot_prompt_template = """
     You are an expert at detecting fake and real reviews. Carefully analyze the following review for signs such as:
-    Task: Classify the following review of a  Amazon product as either "real" or "fake". Carefully analyze the following review for signs such as:
+    Task: Classify the following hotel or product review as either "real" or "fake". Carefully analyze the following review for signs such as:
     - Overly generic or vague language
     - Exaggerated praise or criticism
     - Repetitive or templated phrasing
@@ -37,7 +37,7 @@ class Config:
     few_shot_prompt_template = """
     You are an expert at detecting real and fake reviews.
 
-   Task: Classify the following review of a  Amazon product as either "real" or "fake". Carefully analyze the following review for signs such as:
+   Task: Classify the following hotel or product review as either "real" or "fake". Carefully analyze the following review for signs such as:
     - Overly generic or vague language
     - Exaggerated praise or criticism
     - Repetitive or templated phrasing
