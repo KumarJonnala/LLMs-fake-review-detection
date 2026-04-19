@@ -1,0 +1,97 @@
+https://code.ovgu.de/fin-all/cluster
+
+https://ood.cs.ovgu.de/pun/sys/dashboard/
+
+kumar@Kumars-MacBook-Air ~ % ssh bumu60du@ants.cs.ovgu.de
+
+srun -p gpu-stud --gres=gpu:1 --pty bash
+
+srun -p gpu-stud --gres=shard:8 --pty bash
+
+srun -p gpu -w ant2 --gres=shard:8 --pty bash
+
+sinfo
+
+srun -p vl-parcio --pty bash
+
+hostname
+
+cd /home/bumu60du/fake_review_detection
+
+# Create virtual environment and acivate
+python3 -m venv .venv
+source .venv/bin/activate
+
+# ollama
+# terminal
+apptainer --version
+
+apptainer pull ollama.sif docker://ollama/ollama
+
+apptainer pull --force ollama.sif docker://ollama/ollama
+
+apptainer exec ollama.sif ollama --version
+
+mkdir -p $HOME/ollama
+
+apptainer exec --nv \
+  --env OLLAMA_HOST=0.0.0.0:11400 \
+  --bind $HOME/ollama:/root/.ollama \
+  ollama.sif \
+  ollama serve
+
+
+import os
+print(os.environ.get("OLLAMA_HOST"))
+
+import os
+os.environ["OLLAMA_HOST"] = "http://localhost:11400" 
+
+In 1 terminal: 
+
+apptainer exec --nv \
+  --env OLLAMA_HOST=0.0.0.0:11400 \
+  --bind $HOME/ollama:/root/.ollama \
+  ollama.sif \
+  ollama serve > ollama.log 2>&1 &
+
+apptainer exec --nv \
+  --env OLLAMA_HOST=0.0.0.0:11400 \
+  ollama.sif \
+  ollama list
+
+apptainer exec --nv \
+  --env OLLAMA_HOST=0.0.0.0:11400 \
+  --bind $HOME/ollama:/root/.ollama \
+  ollama.sif \
+  ollama pull gemma3:12b
+
+
+#Access in python/jupyter files
+llm = Ollama(
+    model="gemma3:12b",
+    base_url="http://127.0.0.1:11400"
+)
+
+# slurm
+
+sbatch slurm_fake_review_llm.sh # submit job
+
+squeue # status
+
+squeue -u $USER
+
+sattach <jobid>.0 # live output
+
+scancel <jobid> # cancel job
+
+
+
+ANTS GPU node
+│
+├── Terminal 1
+│   └── apptainer → ollama serve (127.0.0.1:11400)
+│
+└── code-server
+    └── Jupyter / Python notebooks
+        └── base_url = http://127.0.0.1:11400
