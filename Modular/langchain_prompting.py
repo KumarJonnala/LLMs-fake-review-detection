@@ -1,7 +1,6 @@
 import importlib.util
 import json
 import os
-import time
 from pathlib import Path
 
 import pandas as pd
@@ -85,23 +84,6 @@ def load_prompt_template(prompt_key, prompt_attr):
     return getattr(module.Config, prompt_attr)
 
 
-def wait_for_ollama(ollama_host, timeout_seconds=60, poll_interval=2):
-    llm = OllamaLLM(model=ConfigModel.model, base_url=ollama_host)
-    deadline = time.time() + timeout_seconds
-
-    while True:
-        try:
-            llm.invoke("ping")
-            return
-        except Exception:
-            if time.time() >= deadline:
-                raise RuntimeError(
-                    f"Ollama is not reachable at {ollama_host} after {timeout_seconds} seconds. "
-                    f"Start the Ollama service first, then rerun."
-                )
-            time.sleep(poll_interval)
-
-
 
 def save_run_output(df, predictions, output_csv):
     out_df = df.copy()
@@ -128,10 +110,8 @@ def get_available_prompt_attrs(prompt_key):
 
 def main():
 
-    ollama_host = os.environ.get("OLLAMA_HOST", ConfigModel.base_url)
-    os.environ["OLLAMA_HOST"] = ollama_host
-    print(ollama_host)
-    wait_for_ollama(ollama_host)
+    os.environ["OLLAMA_HOST"] = os.environ.get("OLLAMA_HOST", ConfigModel.base_url)
+    print(os.environ.get("OLLAMA_HOST"))
 
     selected_prompt_key = PROMPT_KEY
 

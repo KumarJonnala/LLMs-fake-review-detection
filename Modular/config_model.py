@@ -9,8 +9,10 @@ class ConfigModel:
 
     dataset_paths = {
         "amazon_human_vs_computer": "Datasets/Amazon_Human_VS_ComputerFake.csv",
-        "hotel_human_vs_humanfake": "Datasets/Hotel_Human_VS_HumanFake_relabelled.csv",
+        "hotel_human_vs_humanfake": "Datasets/Hotel_Human_VS_HumanFake.csv",
+        "hotel_human_vs_humanfake_relabelled": "Datasets/Hotel_Human_VS_HumanFake_relabelled.csv",
         "hotel_humanreal_vs_cg": "Datasets/Hotel_HumanReal_VS_CG.csv",
+        "hotel_humanreal_vs_mixfake": "Datasets/Hotel_HumanReal_VS_MixFake.csv",
     }
 
     # Prompt source files under curren_files/Prompts.
