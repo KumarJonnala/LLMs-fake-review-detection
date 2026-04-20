@@ -21,8 +21,8 @@ class ConfigModel:
         "ver_1": "curren_files/Prompts/ver_1.py",
         "ver_2": "curren_files/Prompts/ver_2.py",
         "ver_3": "curren_files/Prompts/ver_3.py",
-        "ver_4_hotel": "curren_files/Prompts/ver_4_hotelPrompt.py",
-        "ver_5_amazon": "curren_files/Prompts/ver_5_amazonPrompt.py",
+        "ver_4_hotelPrompt": "curren_files/Prompts/ver_4_hotelPrompt.py",
+        "ver_5_amazonPrompt": "curren_files/Prompts/ver_5_amazonPrompt.py",
     }
     
     prompt_templates = {
