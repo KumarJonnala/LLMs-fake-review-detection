@@ -43,7 +43,7 @@ class Config:
 
     one_shot_prompt_template2 = """
     You are an expert at detecting fake and real reviews of hotel. Carefully analyze the following review for signs such as:
-    Task: Classify the following review of a  Amazon product as either "real" or "fake". Carefully analyze the following review for signs such as:
+    Task: Classify the following review of a Hotel reviewas either "real" or "fake". Carefully analyze the following review for signs such as:
     - Overly generic or vague language
     - Exaggerated praise or criticism
     - Repetitive or templated phrasing
@@ -87,7 +87,7 @@ class Config:
     few_shot_prompt_template2 = """
     You are an expert at detecting fake and real reviews of hotel. Carefully analyze the following review for signs such as:
     
-    Task: Classify the following review of a  Amazon product as either "real" or "fake". Carefully analyze the following review for signs such as:
+    Task: Classify the following review of a Hotel review as either "real" or "fake". Carefully analyze the following review for signs such as:
     - Overly generic or vague language
     - Exaggerated praise or criticism
     - Repetitive or templated phrasing
