@@ -10,7 +10,7 @@ This README explains how to run the Modular pipeline on ANTs with Ollama.
 - `requirements.txt`: Python dependencies.
 - `AntsCluster.txt`: cluster notes/commands.
 
-## 2) Connect and prepare
+## 2) Connect and prepare on Termial 1
 
 ```bash
 ssh username@ants.cs.ovgu.de
@@ -18,7 +18,7 @@ cd /home/username/directory
 
 ```
 
-## 3) Request a GPU node
+## 3) Request a GPU node on Termial 1
 
 Use a partition/group your account is allowed to use.
 
@@ -28,7 +28,7 @@ srun -p gpu-stud -w ant2 --gres=shard:8 --pty bash
 
 Important: start Ollama and run Python on the same node.
 
-## 4) Start Ollama (same node)
+## 4) Start Ollama (same node) on Termial 1
 
 If needed:
 
@@ -75,18 +75,8 @@ Edit `langchain_prompting.py`:
 - `PROMPT_KEY = "ver_1"` selects one prompt version.
 - Script runs all templates listed under `prompt_templates[PROMPT_KEY]` across all datasets in `dataset_paths`.
 
-## 6) Run directly (interactive)
 
-```bash
-python3 langchain_prompting.py
-```
-
-Outputs are generated per dataset/template pair:
-
-- `<dataset>_<prompt_key>_<prompt_type>_classified_reviews.csv`
-- `<dataset>_<prompt_key>_<prompt_type>_results.json`
-
-## 7) Submit via Slurm
+## 6) Submit via Slurm on Terminal 2
 
 ```bash
 sbatch slurm_fake_review_llm.sh
@@ -99,6 +89,11 @@ Cancel if needed:
 scancel <jobid>
 ```
 
-## 8) Recommended Slurm pattern
+Outputs are generated per dataset/template pair:
+
+- `<dataset>_<prompt_key>_<prompt_type>_classified_reviews.csv`
+- `<dataset>_<prompt_key>_<prompt_type>_results.json`
+
+## 7) Recommended Slurm pattern
 
 To avoid connection issues, ensure Ollama is started inside the same Slurm job before Python execution. If Ollama is on a different node, `localhost` will fail with connection refused.
