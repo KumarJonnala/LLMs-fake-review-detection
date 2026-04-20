@@ -5,7 +5,7 @@ class Config:
     model = ""
 
     zero_shot_prompt_template = """
-    You are an expert at detecting fake and deceptive reviews.
+    You are an expert at detecting truthful and deceptive reviews.
 
     Task: Classify the following hotel or product review as either "truthful" or "deceptive".
 
