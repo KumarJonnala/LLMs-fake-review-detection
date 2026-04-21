@@ -1,0 +1,18 @@
+{
+  "model": "gemma3:12b",
+  "dataset": "Datasets/Amazon_Human_VS_ComputerFake.csv",
+  "domain": "amazon_human_vs_computer",
+  "prompt_type": "few_shot_depth1_width1",
+  "accuracy": 0.725,
+  "f1_weighted": 0.7249724972497249,
+  "confusion_matrix": [
+    [
+      286,
+      114
+    ],
+    [
+      106,
+      294
+    ]
+  ]
+}

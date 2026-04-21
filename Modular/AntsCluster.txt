@@ -8,7 +8,7 @@ srun -p gpu-stud --gres=gpu:1 --pty bash
 
 srun -p gpu-stud --gres=shard:8 --pty bash
 
-srun -p gpu -w ant2 --gres=shard:8 --pty bash
+srun -p gpu -w ant1 --gres=shard:8 --pty bash
 
 sinfo
 
@@ -35,7 +35,7 @@ apptainer exec ollama.sif ollama --version
 mkdir -p $HOME/ollama
 
 apptainer exec --nv \
-  --env OLLAMA_HOST=0.0.0.0:11400 \
+  --env OLLAMA_HOST=0.0.0.0:11500 \
   --bind $HOME/ollama:/root/.ollama \
   ollama.sif \
   ollama serve
