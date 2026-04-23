@@ -6,9 +6,9 @@ kumar@Kumars-MacBook-Air ~ % ssh bumu60du@ants.cs.ovgu.de
 
 srun -p gpu-stud --gres=gpu:1 --pty bash
 
-srun -p gpu-stud --gres=shard:8 --pty bash
+srun -p gpu --gres=shard:8 --pty bash
 
-srun -p gpu -w ant1 --gres=shard:8 --pty bash
+srun -p gpu -w ant7 --gres=shard:8 --pty bash
 
 sinfo
 
