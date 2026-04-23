@@ -1,0 +1,18 @@
+{
+  "model": "phi4:14b",
+  "dataset": "/home/sohy47ma/ReviewProject_new/fake_reviews_prediction/Datasets/Amazon_Human_VS_ComputerFake.csv",
+  "domain": "amazon_human_vs_computer",
+  "prompt_type": "few_shot_depth0_width0",
+  "accuracy": 0.64875,
+  "f1_weighted": 0.6168001104597546,
+  "confusion_matrix": [
+    [
+      375,
+      25
+    ],
+    [
+      256,
+      144
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "model": "phi4:14b",
+  "dataset": "/home/sohy47ma/ReviewProject_new/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG.csv",
+  "domain": "hotel_humanreal_vs_cg",
+  "prompt_type": "one_shot_prompt_template2",
+  "accuracy": 0.5244974874371859,
+  "f1_weighted": 0.5184091578442174,
+  "confusion_matrix": [
+    [
+      328,
+      468
+    ],
+    [
+      289,
+      507
+    ]
+  ]
+}
