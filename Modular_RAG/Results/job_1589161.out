@@ -1,0 +1,1366 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pandas in /home/anuj97og/.local/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (2.3.3)
+Requirement already satisfied: numpy in /home/anuj97og/.local/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (2.0.2)
+Requirement already satisfied: scikit-learn in /home/anuj97og/.local/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (1.6.1)
+Requirement already satisfied: langchain-core in /home/anuj97og/.local/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (0.3.83)
+Requirement already satisfied: langchain-community in /home/anuj97og/.local/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (0.3.31)
+Requirement already satisfied: langchain-ollama in /home/anuj97og/.local/lib/python3.9/site-packages (from -r requirements.txt (line 6)) (0.3.10)
+Requirement already satisfied: faiss-cpu in /home/anuj97og/.local/lib/python3.9/site-packages (from -r requirements.txt (line 7)) (1.13.0)
+Requirement already satisfied: sentence-transformers in /home/anuj97og/.local/lib/python3.9/site-packages (from -r requirements.txt (line 8)) (5.1.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/lib/python3.9/site-packages (from pandas->-r requirements.txt (line 1)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/anuj97og/.local/lib/python3.9/site-packages (from pandas->-r requirements.txt (line 1)) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /home/anuj97og/.local/lib/python3.9/site-packages (from pandas->-r requirements.txt (line 1)) (2025.3)
+Requirement already satisfied: scipy>=1.6.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 3)) (1.13.1)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 3)) (3.6.0)
+Requirement already satisfied: joblib>=1.2.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from scikit-learn->-r requirements.txt (line 3)) (1.5.3)
+Requirement already satisfied: jsonpatch<2.0.0,>=1.33.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-core->-r requirements.txt (line 4)) (1.33)
+Requirement already satisfied: tenacity!=8.4.0,<10.0.0,>=8.1.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-core->-r requirements.txt (line 4)) (9.1.2)
+Requirement already satisfied: PyYAML<7.0.0,>=5.3.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-core->-r requirements.txt (line 4)) (6.0.3)
+Requirement already satisfied: uuid-utils<1.0,>=0.12.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-core->-r requirements.txt (line 4)) (0.14.0)
+Requirement already satisfied: packaging<26.0.0,>=23.2.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-core->-r requirements.txt (line 4)) (25.0)
+Requirement already satisfied: pydantic<3.0.0,>=2.7.4 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-core->-r requirements.txt (line 4)) (2.12.5)
+Requirement already satisfied: langsmith<1.0.0,>=0.3.45 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-core->-r requirements.txt (line 4)) (0.4.37)
+Requirement already satisfied: typing-extensions<5.0.0,>=4.7.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-core->-r requirements.txt (line 4)) (4.15.0)
+Requirement already satisfied: aiohttp<4.0.0,>=3.8.3 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-community->-r requirements.txt (line 5)) (3.13.3)
+Requirement already satisfied: httpx-sse<1.0.0,>=0.4.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-community->-r requirements.txt (line 5)) (0.4.3)
+Requirement already satisfied: requests<3.0.0,>=2.32.5 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-community->-r requirements.txt (line 5)) (2.32.5)
+Requirement already satisfied: SQLAlchemy<3.0.0,>=1.4.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-community->-r requirements.txt (line 5)) (2.0.46)
+Requirement already satisfied: langchain<2.0.0,>=0.3.27 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-community->-r requirements.txt (line 5)) (0.3.27)
+Requirement already satisfied: dataclasses-json<0.7.0,>=0.6.7 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-community->-r requirements.txt (line 5)) (0.6.7)
+Requirement already satisfied: pydantic-settings<3.0.0,>=2.10.1 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-community->-r requirements.txt (line 5)) (2.11.0)
+Requirement already satisfied: ollama<1.0.0,>=0.5.3 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain-ollama->-r requirements.txt (line 6)) (0.6.1)
+Requirement already satisfied: transformers<5.0.0,>=4.41.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from sentence-transformers->-r requirements.txt (line 8)) (4.57.6)
+Requirement already satisfied: torch>=1.11.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from sentence-transformers->-r requirements.txt (line 8)) (2.8.0)
+Requirement already satisfied: Pillow in /usr/lib64/python3.9/site-packages (from sentence-transformers->-r requirements.txt (line 8)) (10.0.1)
+Requirement already satisfied: huggingface-hub>=0.20.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from sentence-transformers->-r requirements.txt (line 8)) (0.36.2)
+Requirement already satisfied: tqdm in /home/anuj97og/.local/lib/python3.9/site-packages (from sentence-transformers->-r requirements.txt (line 8)) (4.67.3)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/anuj97og/.local/lib/python3.9/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r requirements.txt (line 5)) (6.7.1)
+Requirement already satisfied: async-timeout<6.0,>=4.0 in /usr/lib/python3.9/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r requirements.txt (line 5)) (4.0.2)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r requirements.txt (line 5)) (2.6.1)
+Requirement already satisfied: propcache>=0.2.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r requirements.txt (line 5)) (0.4.1)
+Requirement already satisfied: aiosignal>=1.4.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r requirements.txt (line 5)) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r requirements.txt (line 5)) (25.4.0)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r requirements.txt (line 5)) (1.22.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/anuj97og/.local/lib/python3.9/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r requirements.txt (line 5)) (1.8.0)
+Requirement already satisfied: marshmallow<4.0.0,>=3.18.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from dataclasses-json<0.7.0,>=0.6.7->langchain-community->-r requirements.txt (line 5)) (3.26.2)
+Requirement already satisfied: typing-inspect<1,>=0.4.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from dataclasses-json<0.7.0,>=0.6.7->langchain-community->-r requirements.txt (line 5)) (0.9.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from huggingface-hub>=0.20.0->sentence-transformers->-r requirements.txt (line 8)) (2025.10.0)
+Requirement already satisfied: filelock in /home/anuj97og/.local/lib/python3.9/site-packages (from huggingface-hub>=0.20.0->sentence-transformers->-r requirements.txt (line 8)) (3.19.1)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /home/anuj97og/.local/lib/python3.9/site-packages (from huggingface-hub>=0.20.0->sentence-transformers->-r requirements.txt (line 8)) (1.2.0)
+Requirement already satisfied: jsonpointer>=1.9 in /home/anuj97og/.local/lib/python3.9/site-packages (from jsonpatch<2.0.0,>=1.33.0->langchain-core->-r requirements.txt (line 4)) (3.0.0)
+Requirement already satisfied: langchain-text-splitters<1.0.0,>=0.3.9 in /home/anuj97og/.local/lib/python3.9/site-packages (from langchain<2.0.0,>=0.3.27->langchain-community->-r requirements.txt (line 5)) (0.3.11)
+Requirement already satisfied: requests-toolbelt>=1.0.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core->-r requirements.txt (line 4)) (1.0.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core->-r requirements.txt (line 4)) (0.28.1)
+Requirement already satisfied: zstandard>=0.23.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core->-r requirements.txt (line 4)) (0.25.0)
+Requirement already satisfied: orjson>=3.9.14 in /home/anuj97og/.local/lib/python3.9/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core->-r requirements.txt (line 4)) (3.11.5)
+Requirement already satisfied: pydantic-core==2.41.5 in /home/anuj97og/.local/lib/python3.9/site-packages (from pydantic<3.0.0,>=2.7.4->langchain-core->-r requirements.txt (line 4)) (2.41.5)
+Requirement already satisfied: typing-inspection>=0.4.2 in /home/anuj97og/.local/lib/python3.9/site-packages (from pydantic<3.0.0,>=2.7.4->langchain-core->-r requirements.txt (line 4)) (0.4.2)
+Requirement already satisfied: annotated-types>=0.6.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from pydantic<3.0.0,>=2.7.4->langchain-core->-r requirements.txt (line 4)) (0.7.0)
+Requirement already satisfied: python-dotenv>=0.21.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from pydantic-settings<3.0.0,>=2.10.1->langchain-community->-r requirements.txt (line 5)) (1.2.1)
+Requirement already satisfied: six>=1.5 in /usr/lib/python3.9/site-packages (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 1)) (1.15.0)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/lib/python3.9/site-packages (from requests<3.0.0,>=2.32.5->langchain-community->-r requirements.txt (line 5)) (1.26.5)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3.9/site-packages (from requests<3.0.0,>=2.32.5->langchain-community->-r requirements.txt (line 5)) (2.10)
+Requirement already satisfied: charset_normalizer<4,>=2 in /home/anuj97og/.local/lib/python3.9/site-packages (from requests<3.0.0,>=2.32.5->langchain-community->-r requirements.txt (line 5)) (3.4.4)
+Requirement already satisfied: certifi>=2017.4.17 in /home/anuj97og/.local/lib/python3.9/site-packages (from requests<3.0.0,>=2.32.5->langchain-community->-r requirements.txt (line 5)) (2026.1.4)
+Requirement already satisfied: greenlet>=1 in /home/anuj97og/.local/lib/python3.9/site-packages (from SQLAlchemy<3.0.0,>=1.4.0->langchain-community->-r requirements.txt (line 5)) (3.2.4)
+Requirement already satisfied: sympy>=1.13.3 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (1.14.0)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (12.5.8.93)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (12.8.90)
+Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (12.8.4.1)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (11.7.3.90)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (12.8.93)
+Requirement already satisfied: triton==3.4.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (3.4.0)
+Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (9.10.2.21)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (12.8.90)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (11.3.3.83)
+Requirement already satisfied: jinja2 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (3.1.6)
+Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (1.13.1.3)
+Requirement already satisfied: nvidia-nvtx-cu12==12.8.90 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (12.8.90)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (12.8.93)
+Requirement already satisfied: nvidia-curand-cu12==10.3.9.90 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (10.3.9.90)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.27.3 in /home/anuj97og/.local/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (2.27.3)
+Requirement already satisfied: networkx in /usr/lib/python3.9/site-packages (from torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (2.6.2)
+Requirement already satisfied: setuptools>=40.8.0 in /usr/lib/python3.9/site-packages (from triton==3.4.0->torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (57.4.0)
+Requirement already satisfied: importlib-metadata in /home/anuj97og/.local/lib/python3.9/site-packages (from triton==3.4.0->torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (8.7.1)
+Requirement already satisfied: regex!=2019.12.17 in /home/anuj97og/.local/lib/python3.9/site-packages (from transformers<5.0.0,>=4.41.0->sentence-transformers->-r requirements.txt (line 8)) (2026.1.15)
+Requirement already satisfied: safetensors>=0.4.3 in /home/anuj97og/.local/lib/python3.9/site-packages (from transformers<5.0.0,>=4.41.0->sentence-transformers->-r requirements.txt (line 8)) (0.7.0)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from transformers<5.0.0,>=4.41.0->sentence-transformers->-r requirements.txt (line 8)) (0.22.2)
+Requirement already satisfied: anyio in /home/anuj97og/.local/lib/python3.9/site-packages (from httpx<1,>=0.23.0->langsmith<1.0.0,>=0.3.45->langchain-core->-r requirements.txt (line 4)) (4.12.1)
+Requirement already satisfied: httpcore==1.* in /home/anuj97og/.local/lib/python3.9/site-packages (from httpx<1,>=0.23.0->langsmith<1.0.0,>=0.3.45->langchain-core->-r requirements.txt (line 4)) (1.0.9)
+Requirement already satisfied: h11>=0.16 in /home/anuj97og/.local/lib/python3.9/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->langsmith<1.0.0,>=0.3.45->langchain-core->-r requirements.txt (line 4)) (0.16.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from sympy>=1.13.3->torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (1.3.0)
+Requirement already satisfied: mypy-extensions>=0.3.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from typing-inspect<1,>=0.4.0->dataclasses-json<0.7.0,>=0.6.7->langchain-community->-r requirements.txt (line 5)) (1.1.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/anuj97og/.local/lib/python3.9/site-packages (from jinja2->torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (3.0.3)
+Requirement already satisfied: exceptiongroup>=1.0.2 in /home/anuj97og/.local/lib/python3.9/site-packages (from anyio->httpx<1,>=0.23.0->langsmith<1.0.0,>=0.3.45->langchain-core->-r requirements.txt (line 4)) (1.3.1)
+Requirement already satisfied: zipp>=3.20 in /home/anuj97og/.local/lib/python3.9/site-packages (from importlib-metadata->triton==3.4.0->torch>=1.11.0->sentence-transformers->-r requirements.txt (line 8)) (3.23.0)
+Total: 800 | Train (vector store): 400 | Test: 400
+
+============================================================
+  Evaluating model: gemma3:12b
+============================================================
+  [182] True: fake | Pred: fake
+  [395] True: real | Pred: real
+  [131] True: real | Pred: fake
+  [281] True: real | Pred: fake
+  [46] True: real | Pred: real
+  [90] True: fake | Pred: fake
+  [637] True: real | Pred: real
+  [350] True: fake | Pred: fake
+  [684] True: real | Pred: real
+  [215] True: real | Pred: real
+  [195] True: fake | Pred: fake
+  [343] True: fake | Pred: fake
+  [165] True: fake | Pred: fake
+  [722] True: fake | Pred: fake
+  [282] True: real | Pred: fake
+  [493] True: fake | Pred: fake
+  [219] True: real | Pred: fake
+  [324] True: fake | Pred: real
+  [209] True: real | Pred: real
+  [789] True: real | Pred: fake
+  [507] True: fake | Pred: fake
+  [237] True: real | Pred: real
+  [262] True: fake | Pred: real
+  [362] True: real | Pred: fake
+  [714] True: real | Pred: real
+  [750] True: fake | Pred: real
+  [320] True: fake | Pred: fake
+  [305] True: real | Pred: fake
+  [101] True: fake | Pred: real
+  [720] True: fake | Pred: fake
+  [524] True: real | Pred: real
+  [389] True: real | Pred: fake
+  [317] True: real | Pred: real
+  [212] True: real | Pred: real
+  [668] True: fake | Pred: fake
+  [630] True: real | Pred: fake
+  [256] True: fake | Pred: fake
+  [445] True: real | Pred: real
+  [376] True: real | Pred: fake
+  [388] True: real | Pred: real
+  [111] True: fake | Pred: fake
+  [601] True: real | Pred: fake
+  [213] True: real | Pred: real
+  [478] True: real | Pred: fake
+  [301] True: real | Pred: real
+  [398] True: real | Pred: real
+  [76] True: real | Pred: real
+  [663] True: fake | Pred: fake
+  [98] True: fake | Pred: fake
+  [346] True: fake | Pred: fake
+  [21] True: fake | Pred: real
+  [752] True: fake | Pred: fake
+  [609] True: real | Pred: real
+  [88] True: fake | Pred: fake
+  [241] True: fake | Pred: real
+  [269] True: fake | Pred: fake
+  [255] True: fake | Pred: fake
+  [583] True: fake | Pred: fake
+  [415] True: fake | Pred: fake
+  [43] True: real | Pred: real
+  [526] True: real | Pred: real
+  [456] True: real | Pred: real
+  [769] True: real | Pred: fake
+  [500] True: fake | Pred: fake
+  [543] True: real | Pred: fake
+  [679] True: fake | Pred: fake
+  [533] True: real | Pred: fake
+  [443] True: real | Pred: fake
+  [400] True: fake | Pred: fake
+  [576] True: fake | Pred: fake
+  [379] True: real | Pred: real
+  [102] True: fake | Pred: fake
+  [556] True: real | Pred: fake
+  [378] True: real | Pred: real
+  [286] True: real | Pred: real
+  [704] True: real | Pred: real
+  [710] True: real | Pred: real
+  [491] True: fake | Pred: fake
+  [562] True: fake | Pred: fake
+  [249] True: fake | Pred: fake
+  [228] True: real | Pred: real
+  [391] True: real | Pred: fake
+  [628] True: real | Pred: fake
+  [296] True: real | Pred: fake
+  [772] True: real | Pred: fake
+  [430] True: fake | Pred: real
+  [525] True: real | Pred: real
+  [123] True: real | Pred: fake
+  [248] True: fake | Pred: fake
+  [304] True: real | Pred: real
+  [484] True: fake | Pred: fake
+  [91] True: fake | Pred: real
+  [49] True: real | Pred: real
+  [590] True: fake | Pred: fake
+  [711] True: real | Pred: fake
+  [384] True: real | Pred: real
+  [629] True: real | Pred: real
+  [1] True: fake | Pred: real
+  [35] True: fake | Pred: fake
+  [680] True: real | Pred: real
+  [89] True: fake | Pred: fake
+  [175] True: fake | Pred: real
+  [114] True: fake | Pred: real
+  [777] True: real | Pred: real
+  [121] True: real | Pred: real
+  [788] True: real | Pred: real
+  [782] True: real | Pred: real
+  [382] True: real | Pred: real
+  [160] True: fake | Pred: fake
+  [551] True: real | Pred: real
+  [300] True: real | Pred: real
+  [299] True: real | Pred: real
+  [62] True: real | Pred: real
+  [516] True: fake | Pred: fake
+  [580] True: fake | Pred: fake
+  [687] True: real | Pred: real
+  [75] True: real | Pred: real
+  [187] True: fake | Pred: fake
+  [306] True: real | Pred: real
+  [254] True: fake | Pred: fake
+  [185] True: fake | Pred: fake
+  [34] True: fake | Pred: real
+  [512] True: fake | Pred: fake
+  [771] True: real | Pred: real
+  [404] True: fake | Pred: fake
+  [154] True: real | Pred: fake
+  [544] True: real | Pred: real
+  [599] True: fake | Pred: real
+  [563] True: fake | Pred: fake
+  [330] True: fake | Pred: fake
+  [180] True: fake | Pred: fake
+  [126] True: real | Pred: fake
+  [271] True: fake | Pred: fake
+  [412] True: fake | Pred: fake
+  [510] True: fake | Pred: fake
+  [536] True: real | Pred: real
+  [602] True: real | Pred: real
+  [463] True: real | Pred: real
+  [648] True: fake | Pred: real
+  [724] True: fake | Pred: fake
+  [476] True: real | Pred: real
+  [139] True: real | Pred: real
+  [67] True: real | Pred: real
+  [339] True: fake | Pred: fake
+  [224] True: real | Pred: real
+  [66] True: real | Pred: real
+  [725] True: fake | Pred: fake
+  [753] True: fake | Pred: real
+  [250] True: fake | Pred: fake
+  [405] True: fake | Pred: real
+  [32] True: fake | Pred: real
+  [51] True: real | Pred: fake
+  [55] True: real | Pred: real
+  [579] True: fake | Pred: fake
+  [155] True: real | Pred: fake
+  [604] True: real | Pred: real
+  [424] True: fake | Pred: fake
+  [785] True: real | Pred: real
+  [690] True: real | Pred: real
+  [29] True: fake | Pred: real
+  [612] True: real | Pred: real
+  [48] True: real | Pred: fake
+  [743] True: fake | Pred: fake
+  [211] True: real | Pred: fake
+  [369] True: real | Pred: fake
+  [730] True: fake | Pred: fake
+  [208] True: real | Pred: real
+  [347] True: fake | Pred: real
+  [416] True: fake | Pred: fake
+  [78] True: real | Pred: real
+  [414] True: fake | Pred: real
+  [480] True: fake | Pred: fake
+  [377] True: real | Pred: real
+  [93] True: fake | Pred: fake
+  [784] True: real | Pred: fake
+  [608] True: real | Pred: real
+  [494] True: fake | Pred: fake
+  [72] True: real | Pred: real
+  [499] True: fake | Pred: fake
+  [661] True: fake | Pred: real
+  [457] True: real | Pred: real
+  [459] True: real | Pred: real
+  [659] True: fake | Pred: fake
+  [197] True: fake | Pred: fake
+  [345] True: fake | Pred: fake
+  [434] True: fake | Pred: fake
+  [549] True: real | Pred: fake
+  [359] True: fake | Pred: fake
+  [64] True: real | Pred: real
+  [467] True: real | Pred: fake
+  [559] True: real | Pred: real
+  [503] True: fake | Pred: fake
+  [393] True: real | Pred: fake
+  [178] True: fake | Pred: fake
+  [313] True: real | Pred: real
+  [666] True: fake | Pred: fake
+  [555] True: real | Pred: real
+  [127] True: real | Pred: real
+  [705] True: real | Pred: real
+  [678] True: fake | Pred: fake
+  [651] True: fake | Pred: real
+  [12] True: fake | Pred: real
+  [692] True: real | Pred: fake
+  [749] True: fake | Pred: fake
+  [558] True: real | Pred: real
+  [105] True: fake | Pred: fake
+  [584] True: fake | Pred: fake
+  [693] True: real | Pred: real
+  [167] True: fake | Pred: fake
+  [489] True: fake | Pred: fake
+  [58] True: real | Pred: real
+  [642] True: fake | Pred: real
+  [568] True: fake | Pred: fake
+  [132] True: real | Pred: real
+  [192] True: fake | Pred: fake
+  [227] True: real | Pred: real
+  [322] True: fake | Pred: fake
+  [573] True: fake | Pred: fake
+  [435] True: fake | Pred: fake
+  [8] True: fake | Pred: fake
+  [283] True: real | Pred: fake
+  [240] True: fake | Pred: fake
+  [738] True: fake | Pred: real
+  [274] True: fake | Pred: fake
+  [611] True: real | Pred: fake
+  [258] True: fake | Pred: fake
+  [664] True: fake | Pred: fake
+  [279] True: fake | Pred: fake
+  [534] True: real | Pred: fake
+  [401] True: fake | Pred: fake
+  [793] True: real | Pred: real
+  [220] True: real | Pred: real
+  [768] True: real | Pred: fake
+  [578] True: fake | Pred: fake
+  [541] True: real | Pred: real
+  [214] True: real | Pred: real
+  [557] True: real | Pred: real
+  [222] True: real | Pred: real
+  [699] True: real | Pred: real
+  [521] True: real | Pred: fake
+  [310] True: real | Pred: real
+  [719] True: real | Pred: real
+  [701] True: real | Pred: real
+  [683] True: real | Pred: real
+  [373] True: real | Pred: real
+  [504] True: fake | Pred: real
+  [40] True: real | Pred: fake
+  [477] True: real | Pred: real
+  [437] True: fake | Pred: fake
+  [727] True: fake | Pred: fake
+  [421] True: fake | Pred: fake
+  [13] True: fake | Pred: real
+  [122] True: real | Pred: real
+  [168] True: fake | Pred: fake
+  [14] True: fake | Pred: fake
+  [638] True: real | Pred: real
+  [218] True: real | Pred: real
+  [385] True: real | Pred: real
+  [136] True: real | Pred: real
+  [179] True: fake | Pred: fake
+  [764] True: real | Pred: real
+  [334] True: fake | Pred: real
+  [205] True: real | Pred: real
+  [481] True: fake | Pred: real
+  [532] True: real | Pred: real
+  [497] True: fake | Pred: fake
+  [759] True: fake | Pred: fake
+  [321] True: fake | Pred: fake
+  [28] True: fake | Pred: fake
+  [163] True: fake | Pred: fake
+  [575] True: fake | Pred: fake
+  [650] True: fake | Pred: fake
+  [492] True: fake | Pred: fake
+  [547] True: real | Pred: real
+  [623] True: real | Pred: fake
+  [74] True: real | Pred: real
+  [329] True: fake | Pred: fake
+  [603] True: real | Pred: fake
+  [589] True: fake | Pred: fake
+  [357] True: fake | Pred: fake
+  [519] True: fake | Pred: fake
+  [239] True: real | Pred: real
+  [81] True: fake | Pred: fake
+  [513] True: fake | Pred: fake
+  [137] True: real | Pred: real
+  [728] True: fake | Pred: fake
+  [26] True: fake | Pred: fake
+  [739] True: fake | Pred: real
+  [247] True: fake | Pred: fake
+  [537] True: real | Pred: real
+  [92] True: fake | Pred: fake
+  [338] True: fake | Pred: fake
+  [236] True: real | Pred: fake
+  [592] True: fake | Pred: fake
+  [104] True: fake | Pred: fake
+  [2] True: fake | Pred: fake
+  [326] True: fake | Pred: real
+  [411] True: fake | Pred: fake
+  [798] True: real | Pred: fake
+  [466] True: real | Pred: real
+  [230] True: real | Pred: fake
+  [68] True: real | Pred: real
+  [528] True: real | Pred: real
+  [452] True: real | Pred: real
+  [670] True: fake | Pred: fake
+  [645] True: fake | Pred: fake
+  [647] True: fake | Pred: fake
+  [311] True: real | Pred: real
+  [643] True: fake | Pred: fake
+  [621] True: real | Pred: real
+  [639] True: real | Pred: real
+  [509] True: fake | Pred: fake
+  [153] True: real | Pred: real
+  [482] True: fake | Pred: fake
+  [148] True: real | Pred: fake
+  [586] True: fake | Pred: fake
+  [795] True: real | Pred: real
+  [4] True: fake | Pred: fake
+  [363] True: real | Pred: fake
+  [344] True: fake | Pred: fake
+  [366] True: real | Pred: real
+  [709] True: real | Pred: real
+  [775] True: real | Pred: real
+  [454] True: real | Pred: real
+  [386] True: real | Pred: real
+  [567] True: fake | Pred: fake
+  [436] True: fake | Pred: fake
+  [348] True: fake | Pred: fake
+  [713] True: real | Pred: real
+  [422] True: fake | Pred: fake
+  [186] True: fake | Pred: fake
+  [144] True: real | Pred: fake
+  [403] True: fake | Pred: real
+  [496] True: fake | Pred: fake
+  [732] True: fake | Pred: fake
+  [233] True: real | Pred: fake
+  [677] True: fake | Pred: fake
+  [276] True: fake | Pred: fake
+  [665] True: fake | Pred: fake
+  [426] True: fake | Pred: fake
+  [595] True: fake | Pred: fake
+  [483] True: fake | Pred: fake
+  [203] True: real | Pred: real
+  [461] True: real | Pred: real
+  [38] True: fake | Pred: fake
+  [319] True: real | Pred: fake
+  [763] True: real | Pred: real
+  [588] True: fake | Pred: fake
+  [349] True: fake | Pred: fake
+  [367] True: real | Pred: real
+  [407] True: fake | Pred: fake
+  [554] True: real | Pred: fake
+  [44] True: real | Pred: fake
+  [331] True: fake | Pred: fake
+  [676] True: fake | Pred: fake
+  [799] True: real | Pred: real
+  [627] True: real | Pred: real
+  [87] True: fake | Pred: fake
+  [27] True: fake | Pred: fake
+  [253] True: fake | Pred: fake
+  [598] True: fake | Pred: fake
+  [380] True: real | Pred: real
+  [681] True: real | Pred: real
+  [287] True: real | Pred: real
+  [570] True: fake | Pred: fake
+  [529] True: real | Pred: fake
+  [706] True: real | Pred: real
+  [760] True: real | Pred: real
+  [202] True: real | Pred: fake
+  [707] True: real | Pred: real
+  [462] True: real | Pred: real
+  [11] True: fake | Pred: fake
+  [708] True: real | Pred: real
+  [351] True: fake | Pred: fake
+  [225] True: real | Pred: real
+  [548] True: real | Pred: fake
+  [413] True: fake | Pred: fake
+  [94] True: fake | Pred: fake
+  [288] True: real | Pred: real
+  [52] True: real | Pred: real
+  [234] True: real | Pred: real
+  [83] True: fake | Pred: fake
+  [285] True: real | Pred: fake
+  [84] True: fake | Pred: fake
+  [141] True: real | Pred: real
+  [303] True: real | Pred: real
+  [417] True: fake | Pred: fake
+  [778] True: real | Pred: real
+  [757] True: fake | Pred: fake
+  [292] True: real | Pred: fake
+  [726] True: fake | Pred: real
+  [80] True: fake | Pred: real
+  [20] True: fake | Pred: fake
+  [593] True: fake | Pred: fake
+  [468] True: real | Pred: fake
+  [406] True: fake | Pred: fake
+  [472] True: real | Pred: real
+  [517] True: fake | Pred: fake
+  [744] True: fake | Pred: fake
+  [171] True: fake | Pred: real
+  UNKNOWN preds : 0
+
+  Model         : gemma3:12b
+  Accuracy      : 0.7650
+  F1 (fake)     : 0.7783
+  Confusion Matrix (rows=true, cols=pred) [fake | real]:
+  [[165  35]
+ [ 59 141]]
+
+  Classification Report:
+              precision    recall  f1-score   support
+
+        fake       0.74      0.82      0.78       200
+        real       0.80      0.70      0.75       200
+
+    accuracy                           0.77       400
+   macro avg       0.77      0.76      0.76       400
+weighted avg       0.77      0.77      0.76       400
+
+
+============================================================
+  Evaluating model: gemma3:27b
+============================================================
+  [182] True: fake | Pred: fake
+  [395] True: real | Pred: fake
+  [131] True: real | Pred: real
+  [281] True: real | Pred: real
+  [46] True: real | Pred: real
+  [90] True: fake | Pred: fake
+  [637] True: real | Pred: real
+  [350] True: fake | Pred: real
+  [684] True: real | Pred: real
+  [215] True: real | Pred: real
+  [195] True: fake | Pred: fake
+  [343] True: fake | Pred: fake
+  [165] True: fake | Pred: fake
+  [722] True: fake | Pred: fake
+  [282] True: real | Pred: real
+  [493] True: fake | Pred: fake
+  [219] True: real | Pred: fake
+  [324] True: fake | Pred: fake
+  [209] True: real | Pred: real
+  [789] True: real | Pred: real
+  [507] True: fake | Pred: fake
+  [237] True: real | Pred: real
+  [262] True: fake | Pred: real
+  [362] True: real | Pred: fake
+  [714] True: real | Pred: real
+  [750] True: fake | Pred: real
+  [320] True: fake | Pred: fake
+  [305] True: real | Pred: fake
+  [101] True: fake | Pred: fake
+  [720] True: fake | Pred: fake
+  [524] True: real | Pred: real
+  [389] True: real | Pred: real
+  [317] True: real | Pred: real
+  [212] True: real | Pred: real
+  [668] True: fake | Pred: fake
+  [630] True: real | Pred: real
+  [256] True: fake | Pred: fake
+  [445] True: real | Pred: real
+  [376] True: real | Pred: real
+  [388] True: real | Pred: real
+  [111] True: fake | Pred: real
+  [601] True: real | Pred: fake
+  [213] True: real | Pred: real
+  [478] True: real | Pred: fake
+  [301] True: real | Pred: real
+  [398] True: real | Pred: real
+  [76] True: real | Pred: real
+  [663] True: fake | Pred: fake
+  [98] True: fake | Pred: fake
+  [346] True: fake | Pred: fake
+  [21] True: fake | Pred: fake
+  [752] True: fake | Pred: fake
+  [609] True: real | Pred: real
+  [88] True: fake | Pred: fake
+  [241] True: fake | Pred: real
+  [269] True: fake | Pred: fake
+  [255] True: fake | Pred: fake
+  [583] True: fake | Pred: real
+  [415] True: fake | Pred: fake
+  [43] True: real | Pred: real
+  [526] True: real | Pred: real
+  [456] True: real | Pred: real
+  [769] True: real | Pred: fake
+  [500] True: fake | Pred: fake
+  [543] True: real | Pred: fake
+  [679] True: fake | Pred: real
+  [533] True: real | Pred: fake
+  [443] True: real | Pred: fake
+  [400] True: fake | Pred: fake
+  [576] True: fake | Pred: fake
+  [379] True: real | Pred: real
+  [102] True: fake | Pred: real
+  [556] True: real | Pred: fake
+  [378] True: real | Pred: real
+  [286] True: real | Pred: real
+  [704] True: real | Pred: real
+  [710] True: real | Pred: real
+  [491] True: fake | Pred: real
+  [562] True: fake | Pred: fake
+  [249] True: fake | Pred: fake
+  [228] True: real | Pred: real
+  [391] True: real | Pred: fake
+  [628] True: real | Pred: fake
+  [296] True: real | Pred: real
+  [772] True: real | Pred: fake
+  [430] True: fake | Pred: real
+  [525] True: real | Pred: real
+  [123] True: real | Pred: real
+  [248] True: fake | Pred: real
+  [304] True: real | Pred: real
+  [484] True: fake | Pred: fake
+  [91] True: fake | Pred: real
+  [49] True: real | Pred: real
+  [590] True: fake | Pred: fake
+  [711] True: real | Pred: real
+  [384] True: real | Pred: real
+  [629] True: real | Pred: real
+  [1] True: fake | Pred: real
+  [35] True: fake | Pred: fake
+  [680] True: real | Pred: real
+  [89] True: fake | Pred: fake
+  [175] True: fake | Pred: fake
+  [114] True: fake | Pred: real
+  [777] True: real | Pred: real
+  [121] True: real | Pred: real
+  [788] True: real | Pred: real
+  [782] True: real | Pred: real
+  [382] True: real | Pred: real
+  [160] True: fake | Pred: fake
+  [551] True: real | Pred: real
+  [300] True: real | Pred: real
+  [299] True: real | Pred: real
+  [62] True: real | Pred: real
+  [516] True: fake | Pred: fake
+  [580] True: fake | Pred: fake
+  [687] True: real | Pred: real
+  [75] True: real | Pred: real
+  [187] True: fake | Pred: fake
+  [306] True: real | Pred: real
+  [254] True: fake | Pred: fake
+  [185] True: fake | Pred: fake
+  [34] True: fake | Pred: fake
+  [512] True: fake | Pred: fake
+  [771] True: real | Pred: real
+  [404] True: fake | Pred: fake
+  [154] True: real | Pred: fake
+  [544] True: real | Pred: real
+  [599] True: fake | Pred: real
+  [563] True: fake | Pred: fake
+  [330] True: fake | Pred: fake
+  [180] True: fake | Pred: fake
+  [126] True: real | Pred: fake
+  [271] True: fake | Pred: fake
+  [412] True: fake | Pred: fake
+  [510] True: fake | Pred: fake
+  [536] True: real | Pred: real
+  [602] True: real | Pred: real
+  [463] True: real | Pred: real
+  [648] True: fake | Pred: real
+  [724] True: fake | Pred: fake
+  [476] True: real | Pred: real
+  [139] True: real | Pred: real
+  [67] True: real | Pred: real
+  [339] True: fake | Pred: fake
+  [224] True: real | Pred: real
+  [66] True: real | Pred: real
+  [725] True: fake | Pred: fake
+  [753] True: fake | Pred: fake
+  [250] True: fake | Pred: real
+  [405] True: fake | Pred: real
+  [32] True: fake | Pred: fake
+  [51] True: real | Pred: fake
+  [55] True: real | Pred: real
+  [579] True: fake | Pred: fake
+  [155] True: real | Pred: real
+  [604] True: real | Pred: real
+  [424] True: fake | Pred: fake
+  [785] True: real | Pred: real
+  [690] True: real | Pred: real
+  [29] True: fake | Pred: fake
+  [612] True: real | Pred: real
+  [48] True: real | Pred: real
+  [743] True: fake | Pred: fake
+  [211] True: real | Pred: real
+  [369] True: real | Pred: fake
+  [730] True: fake | Pred: fake
+  [208] True: real | Pred: real
+  [347] True: fake | Pred: fake
+  [416] True: fake | Pred: fake
+  [78] True: real | Pred: real
+  [414] True: fake | Pred: real
+  [480] True: fake | Pred: fake
+  [377] True: real | Pred: real
+  [93] True: fake | Pred: fake
+  [784] True: real | Pred: fake
+  [608] True: real | Pred: real
+  [494] True: fake | Pred: fake
+  [72] True: real | Pred: fake
+  [499] True: fake | Pred: fake
+  [661] True: fake | Pred: real
+  [457] True: real | Pred: real
+  [459] True: real | Pred: real
+  [659] True: fake | Pred: fake
+  [197] True: fake | Pred: real
+  [345] True: fake | Pred: fake
+  [434] True: fake | Pred: fake
+  [549] True: real | Pred: fake
+  [359] True: fake | Pred: fake
+  [64] True: real | Pred: real
+  [467] True: real | Pred: fake
+  [559] True: real | Pred: real
+  [503] True: fake | Pred: real
+  [393] True: real | Pred: fake
+  [178] True: fake | Pred: real
+  [313] True: real | Pred: fake
+  [666] True: fake | Pred: fake
+  [555] True: real | Pred: fake
+  [127] True: real | Pred: real
+  [705] True: real | Pred: real
+  [678] True: fake | Pred: fake
+  [651] True: fake | Pred: real
+  [12] True: fake | Pred: fake
+  [692] True: real | Pred: fake
+  [749] True: fake | Pred: fake
+  [558] True: real | Pred: real
+  [105] True: fake | Pred: fake
+  [584] True: fake | Pred: fake
+  [693] True: real | Pred: real
+  [167] True: fake | Pred: fake
+  [489] True: fake | Pred: fake
+  [58] True: real | Pred: real
+  [642] True: fake | Pred: real
+  [568] True: fake | Pred: fake
+  [132] True: real | Pred: real
+  [192] True: fake | Pred: real
+  [227] True: real | Pred: real
+  [322] True: fake | Pred: fake
+  [573] True: fake | Pred: fake
+  [435] True: fake | Pred: fake
+  [8] True: fake | Pred: fake
+  [283] True: real | Pred: real
+  [240] True: fake | Pred: fake
+  [738] True: fake | Pred: real
+  [274] True: fake | Pred: fake
+  [611] True: real | Pred: real
+  [258] True: fake | Pred: fake
+  [664] True: fake | Pred: fake
+  [279] True: fake | Pred: fake
+  [534] True: real | Pred: real
+  [401] True: fake | Pred: fake
+  [793] True: real | Pred: real
+  [220] True: real | Pred: fake
+  [768] True: real | Pred: fake
+  [578] True: fake | Pred: fake
+  [541] True: real | Pred: real
+  [214] True: real | Pred: real
+  [557] True: real | Pred: real
+  [222] True: real | Pred: real
+  [699] True: real | Pred: real
+  [521] True: real | Pred: real
+  [310] True: real | Pred: real
+  [719] True: real | Pred: real
+  [701] True: real | Pred: real
+  [683] True: real | Pred: real
+  [373] True: real | Pred: real
+  [504] True: fake | Pred: real
+  [40] True: real | Pred: real
+  [477] True: real | Pred: real
+  [437] True: fake | Pred: fake
+  [727] True: fake | Pred: fake
+  [421] True: fake | Pred: fake
+  [13] True: fake | Pred: fake
+  [122] True: real | Pred: real
+  [168] True: fake | Pred: fake
+  [14] True: fake | Pred: fake
+  [638] True: real | Pred: real
+  [218] True: real | Pred: real
+  [385] True: real | Pred: real
+  [136] True: real | Pred: real
+  [179] True: fake | Pred: fake
+  [764] True: real | Pred: real
+  [334] True: fake | Pred: real
+  [205] True: real | Pred: real
+  [481] True: fake | Pred: fake
+  [532] True: real | Pred: real
+  [497] True: fake | Pred: fake
+  [759] True: fake | Pred: fake
+  [321] True: fake | Pred: fake
+  [28] True: fake | Pred: fake
+  [163] True: fake | Pred: real
+  [575] True: fake | Pred: fake
+  [650] True: fake | Pred: fake
+  [492] True: fake | Pred: fake
+  [547] True: real | Pred: real
+  [623] True: real | Pred: fake
+  [74] True: real | Pred: real
+  [329] True: fake | Pred: fake
+  [603] True: real | Pred: real
+  [589] True: fake | Pred: fake
+  [357] True: fake | Pred: fake
+  [519] True: fake | Pred: fake
+  [239] True: real | Pred: real
+  [81] True: fake | Pred: real
+  [513] True: fake | Pred: fake
+  [137] True: real | Pred: real
+  [728] True: fake | Pred: fake
+  [26] True: fake | Pred: real
+  [739] True: fake | Pred: real
+  [247] True: fake | Pred: fake
+  [537] True: real | Pred: real
+  [92] True: fake | Pred: real
+  [338] True: fake | Pred: fake
+  [236] True: real | Pred: fake
+  [592] True: fake | Pred: fake
+  [104] True: fake | Pred: fake
+  [2] True: fake | Pred: fake
+  [326] True: fake | Pred: real
+  [411] True: fake | Pred: fake
+  [798] True: real | Pred: fake
+  [466] True: real | Pred: real
+  [230] True: real | Pred: fake
+  [68] True: real | Pred: real
+  [528] True: real | Pred: real
+  [452] True: real | Pred: real
+  [670] True: fake | Pred: real
+  [645] True: fake | Pred: fake
+  [647] True: fake | Pred: fake
+  [311] True: real | Pred: real
+  [643] True: fake | Pred: fake
+  [621] True: real | Pred: real
+  [639] True: real | Pred: real
+  [509] True: fake | Pred: fake
+  [153] True: real | Pred: real
+  [482] True: fake | Pred: fake
+  [148] True: real | Pred: fake
+  [586] True: fake | Pred: fake
+  [795] True: real | Pred: real
+  [4] True: fake | Pred: fake
+  [363] True: real | Pred: real
+  [344] True: fake | Pred: fake
+  [366] True: real | Pred: real
+  [709] True: real | Pred: real
+  [775] True: real | Pred: real
+  [454] True: real | Pred: fake
+  [386] True: real | Pred: real
+  [567] True: fake | Pred: fake
+  [436] True: fake | Pred: fake
+  [348] True: fake | Pred: fake
+  [713] True: real | Pred: real
+  [422] True: fake | Pred: fake
+  [186] True: fake | Pred: fake
+  [144] True: real | Pred: fake
+  [403] True: fake | Pred: fake
+  [496] True: fake | Pred: fake
+  [732] True: fake | Pred: fake
+  [233] True: real | Pred: real
+  [677] True: fake | Pred: fake
+  [276] True: fake | Pred: fake
+  [665] True: fake | Pred: real
+  [426] True: fake | Pred: fake
+  [595] True: fake | Pred: fake
+  [483] True: fake | Pred: fake
+  [203] True: real | Pred: real
+  [461] True: real | Pred: real
+  [38] True: fake | Pred: real
+  [319] True: real | Pred: fake
+  [763] True: real | Pred: real
+  [588] True: fake | Pred: fake
+  [349] True: fake | Pred: fake
+  [367] True: real | Pred: real
+  [407] True: fake | Pred: fake
+  [554] True: real | Pred: fake
+  [44] True: real | Pred: fake
+  [331] True: fake | Pred: fake
+  [676] True: fake | Pred: fake
+  [799] True: real | Pred: real
+  [627] True: real | Pred: real
+  [87] True: fake | Pred: real
+  [27] True: fake | Pred: fake
+  [253] True: fake | Pred: fake
+  [598] True: fake | Pred: fake
+  [380] True: real | Pred: real
+  [681] True: real | Pred: real
+  [287] True: real | Pred: real
+  [570] True: fake | Pred: fake
+  [529] True: real | Pred: real
+  [706] True: real | Pred: real
+  [760] True: real | Pred: real
+  [202] True: real | Pred: fake
+  [707] True: real | Pred: real
+  [462] True: real | Pred: real
+  [11] True: fake | Pred: fake
+  [708] True: real | Pred: real
+  [351] True: fake | Pred: fake
+  [225] True: real | Pred: real
+  [548] True: real | Pred: fake
+  [413] True: fake | Pred: fake
+  [94] True: fake | Pred: fake
+  [288] True: real | Pred: real
+  [52] True: real | Pred: real
+  [234] True: real | Pred: real
+  [83] True: fake | Pred: fake
+  [285] True: real | Pred: fake
+  [84] True: fake | Pred: fake
+  [141] True: real | Pred: real
+  [303] True: real | Pred: real
+  [417] True: fake | Pred: fake
+  [778] True: real | Pred: real
+  [757] True: fake | Pred: fake
+  [292] True: real | Pred: real
+  [726] True: fake | Pred: real
+  [80] True: fake | Pred: fake
+  [20] True: fake | Pred: fake
+  [593] True: fake | Pred: fake
+  [468] True: real | Pred: fake
+  [406] True: fake | Pred: fake
+  [472] True: real | Pred: real
+  [517] True: fake | Pred: fake
+  [744] True: fake | Pred: fake
+  [171] True: fake | Pred: fake
+  UNKNOWN preds : 0
+
+  Model         : gemma3:27b
+  Accuracy      : 0.7950
+  F1 (fake)     : 0.7960
+  Confusion Matrix (rows=true, cols=pred) [fake | real]:
+  [[160  40]
+ [ 42 158]]
+
+  Classification Report:
+              precision    recall  f1-score   support
+
+        fake       0.79      0.80      0.80       200
+        real       0.80      0.79      0.79       200
+
+    accuracy                           0.80       400
+   macro avg       0.80      0.80      0.79       400
+weighted avg       0.80      0.80      0.79       400
+
+
+============================================================
+  Evaluating model: llama3:8b
+============================================================
+  [182] True: fake | Pred: fake
+  [395] True: real | Pred: fake
+  [131] True: real | Pred: fake
+  [281] True: real | Pred: real
+  [46] True: real | Pred: real
+  [90] True: fake | Pred: fake
+  [637] True: real | Pred: real
+  [350] True: fake | Pred: fake
+  [684] True: real | Pred: real
+  [215] True: real | Pred: real
+  [195] True: fake | Pred: fake
+  [343] True: fake | Pred: fake
+  [165] True: fake | Pred: real
+  [722] True: fake | Pred: real
+  [282] True: real | Pred: fake
+  [493] True: fake | Pred: fake
+  [219] True: real | Pred: fake
+  [324] True: fake | Pred: fake
+  [209] True: real | Pred: real
+  [789] True: real | Pred: real
+  [507] True: fake | Pred: real
+  [237] True: real | Pred: real
+  [262] True: fake | Pred: real
+  [362] True: real | Pred: real
+  [714] True: real | Pred: fake
+  [750] True: fake | Pred: real
+  [320] True: fake | Pred: real
+  [305] True: real | Pred: fake
+  [101] True: fake | Pred: real
+  [720] True: fake | Pred: real
+  [524] True: real | Pred: real
+  [389] True: real | Pred: fake
+  [317] True: real | Pred: real
+  [212] True: real | Pred: real
+  [668] True: fake | Pred: fake
+  [630] True: real | Pred: real
+  [256] True: fake | Pred: fake
+  [445] True: real | Pred: fake
+  [376] True: real | Pred: fake
+  [388] True: real | Pred: real
+  [111] True: fake | Pred: fake
+  [601] True: real | Pred: fake
+  [213] True: real | Pred: real
+  [478] True: real | Pred: fake
+  [301] True: real | Pred: fake
+  [398] True: real | Pred: real
+  [76] True: real | Pred: real
+  [663] True: fake | Pred: real
+  [98] True: fake | Pred: fake
+  [346] True: fake | Pred: fake
+  [21] True: fake | Pred: fake
+  [752] True: fake | Pred: real
+  [609] True: real | Pred: real
+  [88] True: fake | Pred: fake
+  [241] True: fake | Pred: real
+  [269] True: fake | Pred: fake
+  [255] True: fake | Pred: fake
+  [583] True: fake | Pred: fake
+  [415] True: fake | Pred: fake
+  [43] True: real | Pred: real
+  [526] True: real | Pred: real
+  [456] True: real | Pred: real
+  [769] True: real | Pred: fake
+  [500] True: fake | Pred: real
+  [543] True: real | Pred: fake
+  [679] True: fake | Pred: fake
+  [533] True: real | Pred: fake
+  [443] True: real | Pred: fake
+  [400] True: fake | Pred: fake
+  [576] True: fake | Pred: fake
+  [379] True: real | Pred: real
+  [102] True: fake | Pred: real
+  [556] True: real | Pred: real
+  [378] True: real | Pred: real
+  [286] True: real | Pred: real
+  [704] True: real | Pred: real
+  [710] True: real | Pred: real
+  [491] True: fake | Pred: real
+  [562] True: fake | Pred: real
+  [249] True: fake | Pred: fake
+  [228] True: real | Pred: real
+  [391] True: real | Pred: real
+  [628] True: real | Pred: fake
+  [296] True: real | Pred: real
+  [772] True: real | Pred: fake
+  [430] True: fake | Pred: real
+  [525] True: real | Pred: real
+  [123] True: real | Pred: fake
+  [248] True: fake | Pred: real
+  [304] True: real | Pred: real
+  [484] True: fake | Pred: fake
+  [91] True: fake | Pred: real
+  [49] True: real | Pred: real
+  [590] True: fake | Pred: fake
+  [711] True: real | Pred: real
+  [384] True: real | Pred: real
+  [629] True: real | Pred: real
+  [1] True: fake | Pred: real
+  [35] True: fake | Pred: real
+  [680] True: real | Pred: real
+  [89] True: fake | Pred: fake
+  [175] True: fake | Pred: real
+  [114] True: fake | Pred: fake
+  [777] True: real | Pred: fake
+  [121] True: real | Pred: real
+  [788] True: real | Pred: real
+  [782] True: real | Pred: real
+  [382] True: real | Pred: real
+  [160] True: fake | Pred: real
+  [551] True: real | Pred: real
+  [300] True: real | Pred: real
+  [299] True: real | Pred: real
+  [62] True: real | Pred: real
+  [516] True: fake | Pred: fake
+  [580] True: fake | Pred: fake
+  [687] True: real | Pred: real
+  [75] True: real | Pred: fake
+  [187] True: fake | Pred: fake
+  [306] True: real | Pred: real
+  [254] True: fake | Pred: fake
+  [185] True: fake | Pred: fake
+  [34] True: fake | Pred: fake
+  [512] True: fake | Pred: real
+  [771] True: real | Pred: real
+  [404] True: fake | Pred: real
+  [154] True: real | Pred: fake
+  [544] True: real | Pred: fake
+  [599] True: fake | Pred: real
+  [563] True: fake | Pred: real
+  [330] True: fake | Pred: fake
+  [180] True: fake | Pred: fake
+  [126] True: real | Pred: fake
+  [271] True: fake | Pred: fake
+  [412] True: fake | Pred: fake
+  [510] True: fake | Pred: real
+  [536] True: real | Pred: real
+  [602] True: real | Pred: real
+  [463] True: real | Pred: real
+  [648] True: fake | Pred: real
+  [724] True: fake | Pred: fake
+  [476] True: real | Pred: real
+  [139] True: real | Pred: real
+  [67] True: real | Pred: real
+  [339] True: fake | Pred: real
+  [224] True: real | Pred: real
+  [66] True: real | Pred: real
+  [725] True: fake | Pred: fake
+  [753] True: fake | Pred: real
+  [250] True: fake | Pred: real
+  [405] True: fake | Pred: real
+  [32] True: fake | Pred: fake
+  [51] True: real | Pred: fake
+  [55] True: real | Pred: fake
+  [579] True: fake | Pred: fake
+  [155] True: real | Pred: real
+  [604] True: real | Pred: real
+  [424] True: fake | Pred: real
+  [785] True: real | Pred: real
+  [690] True: real | Pred: real
+  [29] True: fake | Pred: fake
+  [612] True: real | Pred: real
+  [48] True: real | Pred: real
+  [743] True: fake | Pred: fake
+  [211] True: real | Pred: real
+  [369] True: real | Pred: fake
+  [730] True: fake | Pred: fake
+  [208] True: real | Pred: real
+  [347] True: fake | Pred: real
+  [416] True: fake | Pred: fake
+  [78] True: real | Pred: real
+  [414] True: fake | Pred: real
+  [480] True: fake | Pred: fake
+  [377] True: real | Pred: real
+  [93] True: fake | Pred: fake
+  [784] True: real | Pred: fake
+  [608] True: real | Pred: real
+  [494] True: fake | Pred: real
+  [72] True: real | Pred: fake
+  [499] True: fake | Pred: real
+  [661] True: fake | Pred: real
+  [457] True: real | Pred: real
+  [459] True: real | Pred: fake
+  [659] True: fake | Pred: fake
+  [197] True: fake | Pred: fake
+  [345] True: fake | Pred: real
+  [434] True: fake | Pred: fake
+  [549] True: real | Pred: real
+  [359] True: fake | Pred: fake
+  [64] True: real | Pred: real
+  [467] True: real | Pred: real
+  [559] True: real | Pred: real
+  [503] True: fake | Pred: real
+  [393] True: real | Pred: real
+  [178] True: fake | Pred: fake
+  [313] True: real | Pred: real
+  [666] True: fake | Pred: fake
+  [555] True: real | Pred: real
+  [127] True: real | Pred: real
+  [705] True: real | Pred: fake
+  [678] True: fake | Pred: fake
+  [651] True: fake | Pred: real
+  [12] True: fake | Pred: real
+  [692] True: real | Pred: fake
+  [749] True: fake | Pred: fake
+  [558] True: real | Pred: real
+  [105] True: fake | Pred: fake
+  [584] True: fake | Pred: real
+  [693] True: real | Pred: real
+  [167] True: fake | Pred: fake
+  [489] True: fake | Pred: real
+  [58] True: real | Pred: real
+  [642] True: fake | Pred: real
+  [568] True: fake | Pred: real
+  [132] True: real | Pred: real
+  [192] True: fake | Pred: real
+  [227] True: real | Pred: fake
+  [322] True: fake | Pred: fake
+  [573] True: fake | Pred: fake
+  [435] True: fake | Pred: fake
+  [8] True: fake | Pred: fake
+  [283] True: real | Pred: fake
+  [240] True: fake | Pred: real
+  [738] True: fake | Pred: fake
+  [274] True: fake | Pred: fake
+  [611] True: real | Pred: fake
+  [258] True: fake | Pred: real
+  [664] True: fake | Pred: fake
+  [279] True: fake | Pred: fake
+  [534] True: real | Pred: real
+  [401] True: fake | Pred: real
+  [793] True: real | Pred: real
+  [220] True: real | Pred: real
+  [768] True: real | Pred: fake
+  [578] True: fake | Pred: fake
+  [541] True: real | Pred: real
+  [214] True: real | Pred: real
+  [557] True: real | Pred: real
+  [222] True: real | Pred: real
+  [699] True: real | Pred: fake
+  [521] True: real | Pred: fake
+  [310] True: real | Pred: real
+  [719] True: real | Pred: real
+  [701] True: real | Pred: fake
+  [683] True: real | Pred: real
+  [373] True: real | Pred: real
+  [504] True: fake | Pred: fake
+  [40] True: real | Pred: fake
+  [477] True: real | Pred: real
+  [437] True: fake | Pred: fake
+  [727] True: fake | Pred: fake
+  [421] True: fake | Pred: fake
+  [13] True: fake | Pred: fake
+  [122] True: real | Pred: real
+  [168] True: fake | Pred: fake
+  [14] True: fake | Pred: fake
+  [638] True: real | Pred: real
+  [218] True: real | Pred: real
+  [385] True: real | Pred: real
+  [136] True: real | Pred: fake
+  [179] True: fake | Pred: fake
+  [764] True: real | Pred: fake
+  [334] True: fake | Pred: real
+  [205] True: real | Pred: real
+  [481] True: fake | Pred: real
+  [532] True: real | Pred: real
+  [497] True: fake | Pred: fake
+  [759] True: fake | Pred: fake
+  [321] True: fake | Pred: fake
+  [28] True: fake | Pred: fake
+  [163] True: fake | Pred: fake
+  [575] True: fake | Pred: fake
+  [650] True: fake | Pred: real
+  [492] True: fake | Pred: real
+  [547] True: real | Pred: real
+  [623] True: real | Pred: real
+  [74] True: real | Pred: real
+  [329] True: fake | Pred: fake
+  [603] True: real | Pred: real
+  [589] True: fake | Pred: fake
+  [357] True: fake | Pred: real
+  [519] True: fake | Pred: real
+  [239] True: real | Pred: fake
+  [81] True: fake | Pred: real
+  [513] True: fake | Pred: fake
+  [137] True: real | Pred: real
+  [728] True: fake | Pred: fake
+  [26] True: fake | Pred: real
+  [739] True: fake | Pred: real
+  [247] True: fake | Pred: fake
+  [537] True: real | Pred: real
+  [92] True: fake | Pred: fake
+  [338] True: fake | Pred: fake
+  [236] True: real | Pred: fake
+  [592] True: fake | Pred: real
+  [104] True: fake | Pred: fake
+  [2] True: fake | Pred: fake
+  [326] True: fake | Pred: fake
+  [411] True: fake | Pred: fake
+  [798] True: real | Pred: fake
+  [466] True: real | Pred: real
+  [230] True: real | Pred: fake
+  [68] True: real | Pred: real
+  [528] True: real | Pred: real
+  [452] True: real | Pred: real
+  [670] True: fake | Pred: real
+  [645] True: fake | Pred: real
+  [647] True: fake | Pred: fake
+  [311] True: real | Pred: real
+  [643] True: fake | Pred: real
+  [621] True: real | Pred: real
+  [639] True: real | Pred: real
+  [509] True: fake | Pred: fake
+  [153] True: real | Pred: real
+  [482] True: fake | Pred: fake
+  [148] True: real | Pred: fake
+  [586] True: fake | Pred: real
+  [795] True: real | Pred: real
+  [4] True: fake | Pred: fake
+  [363] True: real | Pred: real
+  [344] True: fake | Pred: real
+  [366] True: real | Pred: real
+  [709] True: real | Pred: real
+  [775] True: real | Pred: real
+  [454] True: real | Pred: real
+  [386] True: real | Pred: real
+  [567] True: fake | Pred: real
+  [436] True: fake | Pred: real
+  [348] True: fake | Pred: real
+  [713] True: real | Pred: fake
+  [422] True: fake | Pred: fake
+  [186] True: fake | Pred: real
+  [144] True: real | Pred: fake
+  [403] True: fake | Pred: real
+  [496] True: fake | Pred: real
+  [732] True: fake | Pred: fake
+  [233] True: real | Pred: real
+  [677] True: fake | Pred: fake
+  [276] True: fake | Pred: fake
+  [665] True: fake | Pred: real
+  [426] True: fake | Pred: real
+  [595] True: fake | Pred: fake
+  [483] True: fake | Pred: real
+  [203] True: real | Pred: real
+  [461] True: real | Pred: real
+  [38] True: fake | Pred: real
+  [319] True: real | Pred: fake
+  [763] True: real | Pred: real
+  [588] True: fake | Pred: fake
+  [349] True: fake | Pred: real
+  [367] True: real | Pred: real
+  [407] True: fake | Pred: fake
+  [554] True: real | Pred: real
+  [44] True: real | Pred: real
+  [331] True: fake | Pred: fake
+  [676] True: fake | Pred: fake
+  [799] True: real | Pred: real
+  [627] True: real | Pred: real
+  [87] True: fake | Pred: fake
+  [27] True: fake | Pred: fake
+  [253] True: fake | Pred: fake
+  [598] True: fake | Pred: fake
+  [380] True: real | Pred: real
+  [681] True: real | Pred: fake
+  [287] True: real | Pred: real
+  [570] True: fake | Pred: real
+  [529] True: real | Pred: real
+  [706] True: real | Pred: real
+  [760] True: real | Pred: real
+  [202] True: real | Pred: real
+  [707] True: real | Pred: real
+  [462] True: real | Pred: real
+  [11] True: fake | Pred: real
+  [708] True: real | Pred: real
+  [351] True: fake | Pred: fake
+  [225] True: real | Pred: real
+  [548] True: real | Pred: fake
+  [413] True: fake | Pred: fake
+  [94] True: fake | Pred: fake
+  [288] True: real | Pred: real
+  [52] True: real | Pred: real
+  [234] True: real | Pred: real
+  [83] True: fake | Pred: fake
+  [285] True: real | Pred: real
+  [84] True: fake | Pred: fake
+  [141] True: real | Pred: real
+  [303] True: real | Pred: real
+  [417] True: fake | Pred: fake
+  [778] True: real | Pred: real
+  [757] True: fake | Pred: fake
+  [292] True: real | Pred: real
+  [726] True: fake | Pred: real
+  [80] True: fake | Pred: fake
+  [20] True: fake | Pred: fake
+  [593] True: fake | Pred: fake
+  [468] True: real | Pred: real
+  [406] True: fake | Pred: real
+  [472] True: real | Pred: real
+  [517] True: fake | Pred: fake
+  [744] True: fake | Pred: fake
+  [171] True: fake | Pred: real
+  UNKNOWN preds : 0
+
+  Model         : llama3:8b
+  Accuracy      : 0.6675
+  F1 (fake)     : 0.6415
+  Confusion Matrix (rows=true, cols=pred) [fake | real]:
+  [[119  81]
+ [ 52 148]]
+
+  Classification Report:
+              precision    recall  f1-score   support
+
+        fake       0.70      0.59      0.64       200
+        real       0.65      0.74      0.69       200
+
+    accuracy                           0.67       400
+   macro avg       0.67      0.67      0.67       400
+weighted avg       0.67      0.67      0.67       400
+
