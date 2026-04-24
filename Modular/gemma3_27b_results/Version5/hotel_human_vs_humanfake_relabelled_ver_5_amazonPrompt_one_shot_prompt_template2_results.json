@@ -1,0 +1,18 @@
+{
+  "model": "gemma3:27b",
+  "dataset": "/home/sohy47ma/ReviewProject_new/fake_reviews_prediction/Datasets/Hotel_Human_VS_HumanFake_relabelled.csv",
+  "domain": "hotel_human_vs_humanfake_relabelled",
+  "prompt_type": "one_shot_prompt_template2",
+  "accuracy": 0.5816582914572864,
+  "f1_weighted": 0.5096699723080851,
+  "confusion_matrix": [
+    [
+      158,
+      638
+    ],
+    [
+      28,
+      768
+    ]
+  ]
+}
