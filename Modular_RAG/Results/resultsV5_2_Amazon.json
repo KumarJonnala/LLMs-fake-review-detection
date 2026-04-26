@@ -1,0 +1,32 @@
+{
+  "run_timestamp": "2026-04-26T19:55:54.689552",
+  "models_evaluated": [
+    "phi4:14b"
+  ],
+  "datasets": {
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Amazon_Human_VS_ComputerFake.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Amazon_Human_VS_ComputerFake.csv",
+      "total_rows": 800,
+      "train_rows": 400,
+      "test_rows": 400,
+      "models": {
+        "phi4:14b": {
+          "accuracy": 0.655,
+          "f1_fake": 0.7184,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 176,
+              "true_fake_pred_real": 24,
+              "true_real_pred_fake": 114,
+              "true_real_pred_real": 86
+            }
+          }
+        }
+      }
+    }
+  }
+}
