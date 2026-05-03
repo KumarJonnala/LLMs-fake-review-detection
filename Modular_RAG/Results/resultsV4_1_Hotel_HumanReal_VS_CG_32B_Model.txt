@@ -1,0 +1,83 @@
+{
+  "run_timestamp": "2026-05-03T12:35:05.552674",
+  "models_evaluated": [
+    "gemma3:12b",
+    "gemma3:27b",
+    "llama3:8b",
+    "phi4:14b"
+  ],
+  "datasets": {
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG_32B_Model.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG_32B_Model.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "gemma3:12b": {
+          "accuracy": 0.9322,
+          "f1_fake": 0.9353,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 390,
+              "true_fake_pred_real": 8,
+              "true_real_pred_fake": 46,
+              "true_real_pred_real": 352
+            }
+          }
+        },
+        "gemma3:27b": {
+          "accuracy": 0.9661,
+          "f1_fake": 0.9663,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 387,
+              "true_fake_pred_real": 11,
+              "true_real_pred_fake": 16,
+              "true_real_pred_real": 382
+            }
+          }
+        },
+        "llama3:8b": {
+          "accuracy": 0.7035,
+          "f1_fake": 0.6093,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 184,
+              "true_fake_pred_real": 214,
+              "true_real_pred_fake": 22,
+              "true_real_pred_real": 376
+            }
+          }
+        },
+        "phi4:14b": {
+          "accuracy": 0.8505,
+          "f1_fake": 0.8652,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 382,
+              "true_fake_pred_real": 16,
+              "true_real_pred_fake": 103,
+              "true_real_pred_real": 295
+            }
+          }
+        }
+      }
+    }
+  }
+}
