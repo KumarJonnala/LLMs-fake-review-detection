@@ -1,0 +1,104 @@
+{
+  "run_timestamp": "2026-04-26T15:42:14.292231",
+  "models_evaluated": [
+    "phi4:14b"
+  ],
+  "datasets": {
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Amazon_Human_VS_ComputerFake.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Amazon_Human_VS_ComputerFake.csv",
+      "total_rows": 800,
+      "train_rows": 400,
+      "test_rows": 400,
+      "models": {
+        "phi4:14b": {
+          "accuracy": 0.65,
+          "f1_fake": 0.6804,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 149,
+              "true_fake_pred_real": 51,
+              "true_real_pred_fake": 89,
+              "true_real_pred_real": 111
+            }
+          }
+        }
+      }
+    },
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_Human_VS_HumanFake_relabelled.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_Human_VS_HumanFake_relabelled.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "phi4:14b": {
+          "accuracy": 0.5955,
+          "f1_fake": 0.4229,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 118,
+              "true_fake_pred_real": 280,
+              "true_real_pred_fake": 42,
+              "true_real_pred_real": 356
+            }
+          }
+        }
+      }
+    },
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "phi4:14b": {
+          "accuracy": 0.804,
+          "f1_fake": 0.7815,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 279,
+              "true_fake_pred_real": 119,
+              "true_real_pred_fake": 37,
+              "true_real_pred_real": 361
+            }
+          }
+        }
+      }
+    },
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_MixFake.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_MixFake.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "phi4:14b": {
+          "accuracy": 0.6935,
+          "f1_fake": 0.6358,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 213,
+              "true_fake_pred_real": 185,
+              "true_real_pred_fake": 59,
+              "true_real_pred_real": 339
+            }
+          }
+        }
+      }
+    }
+  }
+}

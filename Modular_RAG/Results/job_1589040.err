@@ -1,0 +1,3 @@
+/var/spool/slurmd/job1589040/slurm_script: Zeile 13: pip: Kommando nicht gefunden.
+/home/anuj97og/fake_reviews_prediction/RAG_new.py:40: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+  embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")

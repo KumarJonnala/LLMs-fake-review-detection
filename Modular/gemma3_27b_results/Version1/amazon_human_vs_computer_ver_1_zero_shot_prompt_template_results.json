@@ -1,0 +1,18 @@
+{
+  "model": "gemma3:27b",
+  "dataset": "/home/sohy47ma/ReviewProject_new/fake_reviews_prediction/Datasets/Amazon_Human_VS_ComputerFake.csv",
+  "domain": "amazon_human_vs_computer",
+  "prompt_type": "zero_shot_prompt_template",
+  "accuracy": 0.74375,
+  "f1_weighted": 0.7383431055801524,
+  "confusion_matrix": [
+    [
+      240,
+      160
+    ],
+    [
+      45,
+      355
+    ]
+  ]
+}

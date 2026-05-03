@@ -1,0 +1,18 @@
+{
+  "model": "gemma3:12b",
+  "dataset": "Datasets/Hotel_HumanReal_VS_CG_32B_Model.csv",
+  "domain": "hotel_humanreal_vs_cg_32b_model",
+  "prompt_type": "one_shot_prompt_template2",
+  "accuracy": 0.7211055276381909,
+  "f1_weighted": 0.7169016047561146,
+  "confusion_matrix": [
+    [
+      477,
+      319
+    ],
+    [
+      125,
+      671
+    ]
+  ]
+}

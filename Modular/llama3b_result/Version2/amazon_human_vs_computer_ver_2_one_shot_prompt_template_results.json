@@ -1,0 +1,18 @@
+{
+  "model": "llama3:8b",
+  "dataset": "/home/sohy47ma/ReviewProject_new/fake_reviews_prediction/Datasets/Amazon_Human_VS_ComputerFake.csv",
+  "domain": "amazon_human_vs_computer",
+  "prompt_type": "one_shot_prompt_template",
+  "accuracy": 0.6825,
+  "f1_weighted": 0.6590031884544387,
+  "confusion_matrix": [
+    [
+      378,
+      22
+    ],
+    [
+      232,
+      168
+    ]
+  ]
+}

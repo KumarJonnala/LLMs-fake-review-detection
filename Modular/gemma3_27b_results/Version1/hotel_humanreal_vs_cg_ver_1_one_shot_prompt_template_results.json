@@ -1,0 +1,18 @@
+{
+  "model": "gemma3:27b",
+  "dataset": "/home/sohy47ma/ReviewProject_new/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG.csv",
+  "domain": "hotel_humanreal_vs_cg",
+  "prompt_type": "one_shot_prompt_template",
+  "accuracy": 0.664572864321608,
+  "f1_weighted": 0.632843865528798,
+  "confusion_matrix": [
+    [
+      295,
+      501
+    ],
+    [
+      33,
+      763
+    ]
+  ]
+}

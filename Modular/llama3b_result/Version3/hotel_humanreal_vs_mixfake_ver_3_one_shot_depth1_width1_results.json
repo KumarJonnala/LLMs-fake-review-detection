@@ -1,0 +1,18 @@
+{
+  "model": "llama3:8b",
+  "dataset": "/home/sohy47ma/ReviewProject_new/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_MixFake.csv",
+  "domain": "hotel_humanreal_vs_mixfake",
+  "prompt_type": "one_shot_depth1_width1",
+  "accuracy": 0.49246231155778897,
+  "f1_weighted": 0.45640822798183206,
+  "confusion_matrix": [
+    [
+      187,
+      609
+    ],
+    [
+      199,
+      597
+    ]
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "run_timestamp": "2026-04-26T17:33:12.678880",
+  "models_evaluated": [
+    "phi4:14b"
+  ],
+  "datasets": {
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_Human_VS_HumanFake_relabelled.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_Human_VS_HumanFake_relabelled.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "phi4:14b": {
+          "accuracy": 0.6734,
+          "f1_fake": 0.6963,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 298,
+              "true_fake_pred_real": 100,
+              "true_real_pred_fake": 160,
+              "true_real_pred_real": 238
+            }
+          }
+        }
+      }
+    },
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "phi4:14b": {
+          "accuracy": 0.7889,
+          "f1_fake": 0.8108,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 360,
+              "true_fake_pred_real": 38,
+              "true_real_pred_fake": 130,
+              "true_real_pred_real": 268
+            }
+          }
+        }
+      }
+    },
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_MixFake.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_MixFake.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "phi4:14b": {
+          "accuracy": 0.706,
+          "f1_fake": 0.7279,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 313,
+              "true_fake_pred_real": 85,
+              "true_real_pred_fake": 149,
+              "true_real_pred_real": 249
+            }
+          }
+        }
+      }
+    }
+  }
+}

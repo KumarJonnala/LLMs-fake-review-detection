@@ -1,0 +1,83 @@
+{
+  "run_timestamp": "2026-05-03T11:49:44.873758",
+  "models_evaluated": [
+    "gemma3:12b",
+    "gemma3:27b",
+    "llama3:8b",
+    "phi4:14b"
+  ],
+  "datasets": {
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG_32B_Model.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG_32B_Model.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "gemma3:12b": {
+          "accuracy": 0.8405,
+          "f1_fake": 0.8209,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 291,
+              "true_fake_pred_real": 107,
+              "true_real_pred_fake": 20,
+              "true_real_pred_real": 378
+            }
+          }
+        },
+        "gemma3:27b": {
+          "accuracy": 0.902,
+          "f1_fake": 0.9018,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 358,
+              "true_fake_pred_real": 40,
+              "true_real_pred_fake": 38,
+              "true_real_pred_real": 360
+            }
+          }
+        },
+        "llama3:8b": {
+          "accuracy": 0.3656,
+          "f1_fake": 0.0,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 0,
+              "true_fake_pred_real": 398,
+              "true_real_pred_fake": 107,
+              "true_real_pred_real": 291
+            }
+          }
+        },
+        "phi4:14b": {
+          "accuracy": 0.7023,
+          "f1_fake": 0.6359,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 207,
+              "true_fake_pred_real": 191,
+              "true_real_pred_fake": 46,
+              "true_real_pred_real": 352
+            }
+          }
+        }
+      }
+    }
+  }
+}

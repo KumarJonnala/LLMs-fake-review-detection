@@ -1,0 +1,299 @@
+{
+  "run_timestamp": "2026-05-01T10:25:33.486130",
+  "models_evaluated": [
+    "gemma3:12b",
+    "gemma3:27b",
+    "llama3:8b",
+    "phi4:14b"
+  ],
+  "datasets": {
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Amazon_Human_VS_ComputerFake.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Amazon_Human_VS_ComputerFake.csv",
+      "total_rows": 800,
+      "train_rows": 400,
+      "test_rows": 400,
+      "models": {
+        "gemma3:12b": {
+          "accuracy": 0.765,
+          "f1_fake": 0.7389,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 133,
+              "true_fake_pred_real": 67,
+              "true_real_pred_fake": 27,
+              "true_real_pred_real": 173
+            }
+          }
+        },
+        "gemma3:27b": {
+          "accuracy": 0.8125,
+          "f1_fake": 0.8184,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 169,
+              "true_fake_pred_real": 31,
+              "true_real_pred_fake": 44,
+              "true_real_pred_real": 156
+            }
+          }
+        },
+        "llama3:8b": {
+          "accuracy": 0.6625,
+          "f1_fake": 0.597,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 100,
+              "true_fake_pred_real": 100,
+              "true_real_pred_fake": 35,
+              "true_real_pred_real": 165
+            }
+          }
+        },
+        "phi4:14b": {
+          "accuracy": 0.6575,
+          "f1_fake": 0.7175,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 174,
+              "true_fake_pred_real": 26,
+              "true_real_pred_fake": 111,
+              "true_real_pred_real": 89
+            }
+          }
+        }
+      }
+    },
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_Human_VS_HumanFake_relabelled.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_Human_VS_HumanFake_relabelled.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "gemma3:12b": {
+          "accuracy": 0.7136,
+          "f1_fake": 0.6566,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 218,
+              "true_fake_pred_real": 180,
+              "true_real_pred_fake": 48,
+              "true_real_pred_real": 350
+            }
+          }
+        },
+        "gemma3:27b": {
+          "accuracy": 0.7487,
+          "f1_fake": 0.7429,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 289,
+              "true_fake_pred_real": 109,
+              "true_real_pred_fake": 91,
+              "true_real_pred_real": 307
+            }
+          }
+        },
+        "llama3:8b": {
+          "accuracy": 0.6219,
+          "f1_fake": 0.529,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 169,
+              "true_fake_pred_real": 229,
+              "true_real_pred_fake": 72,
+              "true_real_pred_real": 326
+            }
+          }
+        },
+        "phi4:14b": {
+          "accuracy": 0.6696,
+          "f1_fake": 0.6917,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 295,
+              "true_fake_pred_real": 103,
+              "true_real_pred_fake": 160,
+              "true_real_pred_real": 238
+            }
+          }
+        }
+      }
+    },
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "gemma3:12b": {
+          "accuracy": 0.9598,
+          "f1_fake": 0.9587,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 371,
+              "true_fake_pred_real": 27,
+              "true_real_pred_fake": 5,
+              "true_real_pred_real": 393
+            }
+          }
+        },
+        "gemma3:27b": {
+          "accuracy": 0.951,
+          "f1_fake": 0.949,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 363,
+              "true_fake_pred_real": 35,
+              "true_real_pred_fake": 4,
+              "true_real_pred_real": 394
+            }
+          }
+        },
+        "llama3:8b": {
+          "accuracy": 0.701,
+          "f1_fake": 0.635,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 207,
+              "true_fake_pred_real": 191,
+              "true_real_pred_fake": 47,
+              "true_real_pred_real": 351
+            }
+          }
+        },
+        "phi4:14b": {
+          "accuracy": 0.8379,
+          "f1_fake": 0.8562,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 384,
+              "true_fake_pred_real": 14,
+              "true_real_pred_fake": 115,
+              "true_real_pred_real": 283
+            }
+          }
+        }
+      }
+    },
+    "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_MixFake.csv": {
+      "csv_path": "/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_MixFake.csv",
+      "total_rows": 1592,
+      "train_rows": 796,
+      "test_rows": 796,
+      "models": {
+        "gemma3:12b": {
+          "accuracy": 0.8128,
+          "f1_fake": 0.7881,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 277,
+              "true_fake_pred_real": 121,
+              "true_real_pred_fake": 28,
+              "true_real_pred_real": 370
+            }
+          }
+        },
+        "gemma3:27b": {
+          "accuracy": 0.8291,
+          "f1_fake": 0.8191,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 308,
+              "true_fake_pred_real": 90,
+              "true_real_pred_fake": 46,
+              "true_real_pred_real": 352
+            }
+          }
+        },
+        "llama3:8b": {
+          "accuracy": 0.6545,
+          "f1_fake": 0.5572,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 173,
+              "true_fake_pred_real": 225,
+              "true_real_pred_fake": 50,
+              "true_real_pred_real": 348
+            }
+          }
+        },
+        "phi4:14b": {
+          "accuracy": 0.7299,
+          "f1_fake": 0.7514,
+          "confusion_matrix": {
+            "labels": [
+              "fake",
+              "real"
+            ],
+            "matrix": {
+              "true_fake_pred_fake": 325,
+              "true_fake_pred_real": 73,
+              "true_real_pred_fake": 142,
+              "true_real_pred_real": 256
+            }
+          }
+        }
+      }
+    }
+  }
+}
