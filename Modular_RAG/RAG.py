@@ -31,6 +31,7 @@ DATASETS = [
     ("/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_Human_VS_HumanFake_relabelled.csv", "Binary_label"),
     ("/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG.csv",               "Binary_label"),
     ("/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_MixFake.csv",          "Binary_label"),
+    ("/home/anuj97og/fake_reviews_prediction/Datasets/Hotel_HumanReal_VS_CG_32B_Model.csv",     "Binary_label")
 ]
 
 MODELS_TO_EVALUATE = [
@@ -42,7 +43,7 @@ MODELS_TO_EVALUATE = [
 
 RETRIEVER_K      = 5
 VECTORSTORE_PATH = "temp_vectorstore"
-OUTPUT_JSON      = "resultsV5_2_Amazon.json"
+OUTPUT_JSON      = "resultsV4_2_Hotel_HumanReal_VS_CG_32B_Model"
 
 # ─────────────────────────────────────────────
 # SHARED EMBEDDINGS (loaded once)
@@ -58,9 +59,9 @@ embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-
 rag_prompt = PromptTemplate(
     input_variables=["examples", "review"],
     template="""
-    You are an expert at detecting fake and real reviews of Amazon products. Carefully analyze the following review for signs such as:
+    You are an expert at detecting fake and real reviews of hotel. Carefully analyze the following review for signs such as:
     
-    Task: Classify the following review of a  Amazon product as either "real" or "fake". Carefully analyze the following review for signs such as:
+    Task: Classify the following review of a Hotel review as either "real" or "fake". Carefully analyze the following review for signs such as:
     - Overly generic or vague language
     - Exaggerated praise or criticism
     - Repetitive or templated phrasing
@@ -102,9 +103,9 @@ def format_examples(docs) -> str:
 
 def normalize_prediction(response: str) -> str:
     r = response.strip().lower()
-    if "fake" in r:
+    if "fake" in r or "deceptive" in r:
         return "fake"
-    if "real" in r:
+    if "real" in r or "truthful" in r:
         return "real"
     return "UNKNOWN"
 
