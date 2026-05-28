@@ -1,6 +1,6 @@
 # Overview
 
-This document describes the code in the `Modular` and `Modular_RAG` folders, the primary datasets used by the RAG pipelines, and the exact dependency files required to run the code.
+This document describes the code, the primary datasets used by the RAG pipelines, and the exact dependency files required to run the code.
 
 **Purpose**
 - **Backup_Files:** Contains code for the initial testing purposes (Not used currently).
@@ -17,6 +17,12 @@ This document describes the code in the `Modular` and `Modular_RAG` folders, the
 **Datasets referenced**
 - [Datasets/Hotel_HumanReal_VS_CG_32B_Model.csv](Datasets/Hotel_HumanReal_VS_CG_32B_Model.csv#L60-L66) — balanced real vs CG hotel reviews used for RAG evaluation/experiments.
 - [Datasets/Amazon_Human_VS_ComputerFake.csv](Datasets/Amazon_Human_VS_ComputerFake.csv#L30-L36) — Amazon human vs synthetic dataset used in experiments and examples.
+- [Datasets/Hotel_Human_VS_HumanFake_relabelled.csv](Datasets/Hotel_Human_VS_HumanFake_relabelled.csv) — Human written fake and real reviews of hotels and examples dataset used in experiments and examples.
+- [Datasets/Hotel_HumanReal_VS_MixFake.csv](Datasets/Hotel_HumanReal_VS_MixFake.csv) — Human written real hotel reviews and Mix fake (consits of human written fake and computer generated review) dataset used in experiments and examples.
+
+- [Datasets/Hotel_HumanReal_VS_CG.csv](Datasets/Hotel_HumanReal_VS_CG.csv) — Human written real hotel reviews and Computer genrated hotel reviews dataset used in experiments and examples.
+
+
 
 If you plan to run the RAG scripts, ensure the CSVs exist at the paths expected by the drivers or update `DATASETS` / `CSV_PATH` in the scripts.
 
@@ -46,7 +52,11 @@ pip install -r Modular_RAG/requirements.txt
 ```bash
 export OLLAMA_HOST=http://localhost:8500
 ```
-
+4. To download the latest ollama image in HPC cluster run in the root directory.
+```bash
+apptainer pull ollama_latest.sif docker://ollama/ollama
+```
+This will install a package file for ollama.that will be used when running slurm job.
 **Run examples**
 - To run the modular prompt evaluator (uses `ConfigModel` and configured prompts):
 
