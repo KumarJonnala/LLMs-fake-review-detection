@@ -7,3 +7,5 @@ CG - Computer Generated
 
 All mix --> To be created by merging the 3 datasets (Amazon, Hotel_Human_VS_HumanFake, Hotel_HumanReal_VS_CG) IF NEEDED
 
+Amazon dataset -> https://osf.io/tyue9/overview
+Hotel dataset -> https://www.kaggle.com/datasets/rtatman/deceptive-opinion-spam-corpus/data
